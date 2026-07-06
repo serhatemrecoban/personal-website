@@ -7,7 +7,7 @@ const profile = {
   location: "Lausanne, Switzerland",
   email: "serhat.coban@epfl.ch",
   scholarUrl: "https://scholar.google.com/citations?user=1AlofT0AAAAJ&hl=en&oi=ao",
-  websiteUrl: "https://serhatemrecoban.github.io/personal-website/",
+  websiteUrl: "https://serhatemrecoban.github.io/",
   yaninaUrl: "https://theory.epfl.ch/yanina/",
   emreUrl: "https://people.epfl.ch/emre.telatar",
 };
