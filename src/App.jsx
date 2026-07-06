@@ -17,6 +17,8 @@ const links = [
   { label: "GitHub", href: profile.githubUrl },
 ];
 
+const portraitPhotos = ["/photos/serhat-01.jpeg"];
+
 const researchInterests = [
   "Information theory",
   "Communication Theory",
@@ -135,9 +137,21 @@ function Header() {
 }
 
 function Portrait() {
+  const [photoSrc, setPhotoSrc] = useState(() => {
+    const index = Math.floor(Math.random() * portraitPhotos.length);
+    return portraitPhotos[index];
+  });
+
   return (
-    <div className="portrait">
-      <span>SÇ</span>
+    <div className="portrait-shell">
+      <div className="portrait">
+        <img
+          src={photoSrc}
+          alt={profile.name}
+          className="portrait-image"
+          onError={() => setPhotoSrc(portraitPhotos[0])}
+        />
+      </div>
     </div>
   );
 }
@@ -360,29 +374,33 @@ a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 34px;
+  grid-template-columns: 260px 1fr;
+  gap: 38px;
   align-items: start;
 }
 
-.portrait {
-  width: 190px;
-  height: 225px;
-  display: grid;
-  place-items: center;
-  background: #f2f2f2;
-  color: #666666;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.8rem;
+.portrait-shell {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 6px;
 }
 
-.portrait span {
-  width: 82px;
-  height: 82px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #d4d4d4;
+.portrait {
+  width: 230px;
+  height: 310px;
+  overflow: hidden;
+  background: #f4f4f4;
   border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 
 h1,
@@ -547,11 +565,6 @@ footer {
   .hero {
     grid-template-columns: 1fr;
     gap: 22px;
-  }
-
-  .portrait {
-    width: 190px;
-    height: 225px;
   }
 
   h1 {
