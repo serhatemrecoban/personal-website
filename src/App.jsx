@@ -68,6 +68,31 @@ const publications = [
   },
 ];
 
+const projects = [
+  {
+    title: "Formally Verified PCP Constructions",
+    venue: "Lean formalization project (ongoing)",
+    authors:
+      "Serhat Emre Coban, Davide Mazzali, Khanh Nguyen, Vincent Palma, Yanting Teng, Thomas Vidick, Yuxi Zheng",
+    abstract:
+      "We present a Lean formalization of an exponential-length PCP for quadratic equation satisfiability, a construction that appears as a component in the original proof of the PCP theorem. " +
+      "The development includes Fourier-analytic tools for functions over general finite fields, which we use to formalize the BLR linearity test in this setting. " +
+      "Separately, we formalize the Gowers–Hatami theorem and its reduction to BLR linearity tests. " +
+      "On the PCP side, we develop a modular verifier interface using ArkLib’s OracleComp framework, allowing PCP verifiers to be represented as probabilistic oracle computations. " +
+      "This interface, and the accompanying libraries for finite-field Fourier analysis and linearity testing, may be of independent interest.",
+    links: [
+      {
+        label: "Website",
+        href: "https://yuxi-zheng.github.io/blr-pcp-formal-verification/",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/yuxi-zheng/blr-pcp-formal-verification",
+      },
+    ],
+  },
+];
+
 const teaching = [
   "Spring 2026 · EPFL · Teaching Assistant · COM-202 Signal Processing",
   "2026 · EPFL · Course project · Formal Verification / Lean",
@@ -80,6 +105,7 @@ function Header() {
       <nav>
         <a href="#about">About</a>
         <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
         <a href="#teaching">Teaching</a>
         <a href="#misc">Miscellaneous</a>
       </nav>
@@ -209,6 +235,16 @@ export default function App() {
           <div className="publication-list">
             {publications.map((paper) => (
               <Publication key={paper.title} paper={paper} />
+            ))}
+          </div>
+        </section>
+
+        <section id="projects" className="section">
+          <h2>Projects</h2>
+
+          <div className="publication-list">
+            {projects.map((project) => (
+              <Publication key={project.title} paper={project} />
             ))}
           </div>
         </section>
