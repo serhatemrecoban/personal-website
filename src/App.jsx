@@ -104,7 +104,7 @@ const projects = [
   },
   {
     title: "LeanInfoTheory",
-    venue: "Lean/mathlib project (ongoing)",
+    venue: "Lean formalization project (ongoing)",
     authors: "Serhat Emre Coban",
     abstract:
       "We present LeanInfoTheory, an early-stage Lean/mathlib project for finite information measures and a planned entropy-inequality certificate pipeline. " +
