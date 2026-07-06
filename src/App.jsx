@@ -45,7 +45,7 @@ const publications = [
   year = {2026},
   address = {Guangzhou, China}
 }`,
-    links: [],
+    links: [{ label: "paper", href: "" }],
   },
   {
     title: "Machine Learning and Kalman Filtering for Nanomechanical Mass Spectrometry",
