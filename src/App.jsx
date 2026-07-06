@@ -17,7 +17,16 @@ const links = [
   { label: "GitHub", href: profile.githubUrl },
 ];
 
-const portraitPhotos = ["/photos/serhat-01.jpeg"];
+const portraitPhotos = [
+  "/photos/Emre-personal-website-photo-1.jpeg",
+  "/photos/Emre-personal-website-photo-2.jpeg",
+  "/photos/Emre-personal-website-photo-3.jpeg",
+  "/photos/Emre-personal-website-photo-4.jpeg",
+  "/photos/Emre-personal-website-photo-5.jpeg",
+  "/photos/Emre-personal-website-photo-6.jpeg",
+  "/photos/Emre-personal-website-photo-7.jpeg",
+  "/photos/Emre-personal-website-photo-8.jpeg",
+];
 
 const researchInterests = [
   "Information theory",
