@@ -135,7 +135,7 @@ const projects = [
 const otherManuscripts = [
   {
     title: "Universal Compression of Memoryless Sources over Large Alphabets",
-    venue: "Ph.D. candidacy exam report, EDIC, EPFL",
+    venue: "PhD Candidacy Report",
     authors: "Serhat Emre Coban",
     abstract:
       "The problem of universal coding of memoryless sources has been studied extensively for decades and it is understood that we can achieve a compression as good as in the case of classical source coding for finite source alphabets when the number of symbols is large. " +
@@ -152,15 +152,38 @@ const otherManuscripts = [
   },
   {
     title: "Functional Representation Lemma and Its Applications",
-    venue: "Semester project",
+    venue: "Semester Project, Fall 2023, EPFL",
     authors: "Serhat Emre Coban",
-    links: [{ label: "paper", href: "" }],
+    abstract:
+      "This project is about the Strong Functional Representation Lemma (SFRL) and its applications to one-shot achievability problems in information theory. " +
+      "For given random variables X and Y, functional representation means finding a random variable Z and a deterministic function g such that Z is independent of X and Y can be represented as g(X, Z). " +
+      "We can think of SFRL as a tool that provides functional representation with an information-theoretic bound on the conditional entropy of Y given Z, namely H(Y|Z) < I(X, Y) + log(I(X, Y) + 1) + 4. " +
+      "In this project, I went through the proof and applications of SFRL to several coding problems, from channel simulation to lossy source coding. " +
+      "Then, I started studying the Poisson Matching Lemma, which extends the work on SFRL. In this report, I summarized these works and presented my understanding of them.",
+    links: [
+      {
+        label: "pdf",
+        href: "/pdfs/functional-representation-lemma-applications.pdf",
+      },
+    ],
   },
   {
     title: "Poisson Matching Lemma and Its Applications",
-    venue: "Semester project",
+    venue: "Semester Project, Spring 2024, EPFL",
     authors: "Serhat Emre Coban",
-    links: [{ label: "paper", href: "" }],
+    abstract:
+      "This project concerns the Poisson Matching Lemma (PML), the Strong Functional Representation Lemma (SFRL), and their applications to one-shot achievability problems in information theory. " +
+      "For given random variables X and Y, functional representation means finding a random variable Z and a deterministic function g such that Z is independent of X and Y can be represented as g(X, Z). " +
+      "We can think of SFRL as a tool that provides functional representation with an information-theoretic bound on the conditional entropy of Y given Z, namely H(Y|Z) < I(X, Y) + log(I(X, Y) + 1) + 4. " +
+      "In this report, first, we present a technique that we call Universal SFRL (USFRL), the universal version of SFRL, and its application to the one-shot universal channel simulation problem. " +
+      "Then, we examine our attempt at using USFRL for the universal source coding problem by comparing it to how SFRL is used for the rate-distortion problem. " +
+      "Finally, we present the PML, which extends the work on SFRL. In this report, we summarize these papers, present our related work, and provide potential research directions.",
+    links: [
+      {
+        label: "pdf",
+        href: "/pdfs/poisson-matching-lemma-applications.pdf",
+      },
+    ],
   },
 ];
 
