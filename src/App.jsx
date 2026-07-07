@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const profile = {
   name: "Serhat Emre Çoban",
+  asciiName: "Serhat Emre Coban",
   subtitle: "Ph.D. Student in Information Theory",
   affiliation: "EPFL",
   location: "Lausanne, Switzerland",
@@ -378,6 +379,9 @@ export default function App() {
             <p className="subtitle">
               {profile.subtitle}, {profile.affiliation}
             </p>
+            <p className="name-note">
+              Also written as {profile.asciiName} in ASCII-only contexts.
+            </p>
 
             <p>
               I am a third-year Ph.D. student at EPFL, advised by{" "}
@@ -626,8 +630,14 @@ h3 {
 }
 
 .subtitle {
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+.name-note {
   margin-bottom: 22px;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .intro p {
