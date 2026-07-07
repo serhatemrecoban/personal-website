@@ -134,7 +134,7 @@ const talks = [
   {
     title: "On Perfect Functional Representations",
     venue: "IEEE International Symposium on Information Theory (ISIT)",
-    date: "2026",
+    date: "July 2026, Guangzhou, China",
   },
 ];
 
