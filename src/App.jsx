@@ -130,6 +130,21 @@ const projects = [
   },
 ];
 
+const otherManuscripts = [
+  {
+    title: "Functional Representation Lemma and Its Applications",
+    venue: "Semester project",
+    authors: "Serhat Emre Coban",
+    links: [{ label: "paper", href: "" }],
+  },
+  {
+    title: "Poisson Matching Lemma and Its Applications",
+    venue: "Semester project",
+    authors: "Serhat Emre Coban",
+    links: [{ label: "paper", href: "" }],
+  },
+];
+
 const talks = [
   {
     title: "On Perfect Functional Representations",
@@ -203,6 +218,7 @@ function Header() {
         <a href="#about">About</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
+        <a href="#other-manuscripts">Other manuscripts</a>
         <a href="#talks">Talks</a>
         <a href="#teaching">Teaching</a>
         <a href="#service">Service</a>
@@ -252,9 +268,11 @@ function Publication({ paper }) {
             {link.label}
           </a>
         ))}
-        <button type="button" onClick={() => setOpen(!open)}>
-          {open ? "hide abstract" : "abstract"}
-        </button>
+        {paper.abstract && (
+          <button type="button" onClick={() => setOpen(!open)}>
+            {open ? "hide abstract" : "abstract"}
+          </button>
+        )}
         {paper.bibtex && (
           <button type="button" onClick={() => setBibtexOpen(!bibtexOpen)}>
             {bibtexOpen ? "hide bibtex" : "bibtex"}
@@ -368,6 +386,16 @@ export default function App() {
           <div className="publication-list">
             {projects.map((project) => (
               <Publication key={project.title} paper={project} />
+            ))}
+          </div>
+        </section>
+
+        <section id="other-manuscripts" className="section">
+          <h2>Other Manuscripts</h2>
+
+          <div className="publication-list">
+            {otherManuscripts.map((manuscript) => (
+              <Publication key={manuscript.title} paper={manuscript} />
             ))}
           </div>
         </section>
