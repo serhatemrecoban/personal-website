@@ -183,6 +183,19 @@ const teaching = [
   },
 ];
 
+const service = [
+  {
+    role: "Reviewer",
+    venue: "IEEE International Symposium on Information Theory (ISIT)",
+    date: "2026",
+  },
+  {
+    role: "Co-organizer",
+    venue: "Linear Programming Reading Group, EPFL Information Theory Lab",
+    date: "with Prof. Yanina Y. Shkel",
+  },
+];
+
 function Header() {
   return (
     <header className="site-header">
@@ -192,6 +205,7 @@ function Header() {
         <a href="#projects">Projects</a>
         <a href="#talks">Talks</a>
         <a href="#teaching">Teaching</a>
+        <a href="#service">Service</a>
         <a href="#misc">Miscellaneous</a>
       </nav>
     </header>
@@ -383,6 +397,20 @@ export default function App() {
                   {item.role}, {item.institution}
                 </span>
                 <span className="detail-terms">{item.terms}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section id="service" className="section">
+          <h2>Service</h2>
+
+          <ul className="detail-list">
+            {service.map((item) => (
+              <li key={`${item.role}-${item.venue}`}>
+                <strong>{item.role}</strong>
+                <span className="detail-meta">{item.venue}</span>
+                <span className="detail-terms">{item.date}</span>
               </li>
             ))}
           </ul>
