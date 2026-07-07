@@ -489,10 +489,12 @@ export default function App() {
         <section id="misc" className="section">
           <h2>Miscellaneous</h2>
 
-          <ul>
-            <li>Add a short personal note here.</li>
-            <li>This section can later become notes, blog posts, or links.</li>
-          </ul>
+          <p>
+            Outside research, my main hobby is weighted calisthenics and being
+            a cheerful gym rat. On the side, I like playing chess, figure
+            skating, hiking, cooking, and trying to keep my plants alive through
+            sheer optimism.
+          </p>
         </section>
 
         <footer>
