@@ -186,12 +186,12 @@ const teaching = [
 const service = [
   {
     role: "Reviewer",
-    venue: "IEEE International Symposium on Information Theory (ISIT)",
-    date: "2026",
+    venue: "IEEE International Symposium on Information Theory (ISIT), 2026",
+    date: "",
   },
   {
     role: "Co-organizer",
-    venue: "Linear Programming Reading Group, EPFL Information Theory Lab",
+    venue: "Linear Programming Reading Group, EPFL",
     date: "with Prof. Yanina Y. Shkel",
   },
 ];
@@ -410,7 +410,7 @@ export default function App() {
               <li key={`${item.role}-${item.venue}`}>
                 <strong>{item.role}</strong>
                 <span className="detail-meta">{item.venue}</span>
-                <span className="detail-terms">{item.date}</span>
+                {item.date && <span className="detail-terms">{item.date}</span>}
               </li>
             ))}
           </ul>
