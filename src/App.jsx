@@ -126,9 +126,48 @@ const projects = [
 ];
 
 const teaching = [
-  "Spring 2026 · EPFL · Teaching Assistant · COM-202 Signal Processing",
-  "2026 · EPFL · Course project · Formal Verification / Lean",
-  "Add another course, review session, or mentoring activity here.",
+  {
+    course: "COM-202 Signal Processing",
+    role: "Teaching Assistant",
+    institution: "EPFL",
+    terms: "Spring 2025, Spring 2026",
+  },
+  {
+    course: "COM-404 Information Theory and Coding",
+    role: "Teaching Assistant",
+    institution: "EPFL",
+    terms: "Fall 2025",
+  },
+  {
+    course: "COM-406 Foundations of Data Science",
+    role: "Teaching Assistant",
+    institution: "EPFL",
+    terms: "Fall 2024",
+  },
+  {
+    course: "COM-302 Principles of Digital Communications",
+    role: "Teaching Assistant",
+    institution: "EPFL",
+    terms: "Spring 2024",
+  },
+  {
+    course: "ELEC 201 Signals and Systems",
+    role: "Teaching Assistant",
+    institution: "Koç University",
+    terms: "Fall 2022",
+  },
+  {
+    course: "ELEC 303 Digital Signal Processing",
+    role: "Teaching Assistant",
+    institution: "Koç University",
+    terms: "Spring 2022",
+  },
+  {
+    course: "ELEC 301 Systems, Control and Communication",
+    role: "Teaching Assistant",
+    institution: "Koç University",
+    terms: "Fall 2021",
+  },
 ];
 
 function Header() {
@@ -296,9 +335,15 @@ export default function App() {
         <section id="teaching" className="section">
           <h2>Teaching</h2>
 
-          <ul>
+          <ul className="teaching-list">
             {teaching.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={`${item.course}-${item.terms}`}>
+                <strong>{item.course}</strong>
+                <span className="teaching-meta">
+                  {item.role}, {item.institution}
+                </span>
+                <span className="teaching-terms">{item.terms}</span>
+              </li>
             ))}
           </ul>
         </section>
@@ -540,6 +585,29 @@ h3 {
 
 .bibtex code {
   font-family: "Courier New", Courier, monospace;
+}
+
+.teaching-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.teaching-list li {
+  margin-bottom: 16px;
+}
+
+.teaching-list strong,
+.teaching-meta,
+.teaching-terms {
+  display: block;
+}
+
+.teaching-meta {
+  color: var(--muted);
+}
+
+.teaching-terms {
+  margin-top: 2px;
 }
 
 ul {
