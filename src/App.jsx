@@ -87,7 +87,7 @@ const publications = [
 const projects = [
   {
     title: "Formally Verified PCP Constructions",
-    venue: "Lean formalization project (ongoing)",
+    venue: "Lean formalization project",
     authors:
       "Serhat Emre Coban, Davide Mazzali, Khanh Nguyen, Vincent Palma, Yanting Teng, Thomas Vidick, Yuxi Zheng",
     abstract:
