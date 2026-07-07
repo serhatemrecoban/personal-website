@@ -17,6 +17,11 @@ const links = [
   { label: "GitHub", href: profile.githubUrl },
 ];
 
+const externalLinkProps = {
+  target: "_blank",
+  rel: "noreferrer",
+};
+
 const portraitPhotos = [
   "/photos/Emre-personal-website-photo-1.jpeg",
   "/photos/Emre-personal-website-photo-2.jpeg",
@@ -216,7 +221,11 @@ function Publication({ paper }) {
 
       <div className="paper-links">
         {paper.links.map((link) => (
-          <a key={link.label} href={link.href}>
+          <a
+            key={link.label}
+            href={link.href}
+            {...(link.href.startsWith("http") ? externalLinkProps : {})}
+          >
             {link.label}
           </a>
         ))}
@@ -260,7 +269,9 @@ function ContactLinks() {
       {links.map((link) => (
         <span key={link.label}>
           <span className="dot">{" \u00b7 "}</span>
-          <a href={link.href}>{link.label}</a>
+          <a href={link.href} {...externalLinkProps}>
+            {link.label}
+          </a>
         </span>
       ))}
     </p>
@@ -287,9 +298,15 @@ export default function App() {
 
             <p>
               I am a third-year Ph.D. student at EPFL, advised by{" "}
-              <a href={profile.yaninaUrl}>Prof. Yanina Y. Shkel</a> and
-              co-advised by{" "}
-              <a href={profile.emreUrl}>Prof. Emre Telatar</a>. Before joining
+              <a href={profile.yaninaUrl} {...externalLinkProps}>
+                Prof. Yanina Y. Shkel
+              </a>{" "}
+              and co-advised by{" "}
+              <a href={profile.emreUrl} {...externalLinkProps}>
+                Prof. Emre Telatar
+              </a>
+              {". "}
+              Before joining
               EPFL, I received my B.Sc. in Electrical and Electronics
               Engineering from Koç University, where I also completed a double
               major in Mathematics.
