@@ -22,6 +22,8 @@ const externalLinkProps = {
   rel: "noreferrer",
 };
 
+const opensInNewTab = (href) => Boolean(href) && !href.startsWith("#");
+
 const portraitPhotos = [
   "/photos/Emre-personal-website-photo-1.jpeg",
   "/photos/Emre-personal-website-photo-2.jpeg",
@@ -133,9 +135,20 @@ const projects = [
 const otherManuscripts = [
   {
     title: "Universal Compression of Memoryless Sources over Large Alphabets",
-    venue: "Ph.D. candidacy write-up",
+    venue: "Ph.D. candidacy exam report, EDIC, EPFL",
     authors: "Serhat Emre Coban",
-    links: [{ label: "paper", href: "" }],
+    abstract:
+      "The problem of universal coding of memoryless sources has been studied extensively for decades and it is understood that we can achieve a compression as good as in the case of classical source coding for finite source alphabets when the number of symbols is large. " +
+      "In this work, we will examine some works about universal compression ([1], [2], [3]) with a special interest in the \"large alphabet\" case. " +
+      "Although it is impossible to limit the redundancy when the alphabet is large, we will see that some part of the redundancy can still be limited by exploring these papers. " +
+      "First, referencing [1], we will take a broader look at the universal compression problem. Next, we will suggest a method of universal compression over any arbitrary unknown alphabet referencing [2]. " +
+      "Later, referencing [3], we will compare various approaches to universal compression over large alphabets. Lastly, we will propose our ideas on how to improve this research.",
+    links: [
+      {
+        label: "pdf",
+        href: "/pdfs/universal-compression-memoryless-sources-large-alphabets.pdf",
+      },
+    ],
   },
   {
     title: "Functional Representation Lemma and Its Applications",
@@ -269,7 +282,7 @@ function Publication({ paper }) {
           <a
             key={link.label}
             href={link.href}
-            {...(link.href.startsWith("http") ? externalLinkProps : {})}
+            {...(opensInNewTab(link.href) ? externalLinkProps : {})}
           >
             {link.label}
           </a>
