@@ -132,6 +132,12 @@ const projects = [
 
 const otherManuscripts = [
   {
+    title: "Universal Compression of Memoryless Sources over Large Alphabets",
+    venue: "Ph.D. candidacy write-up",
+    authors: "Serhat Emre Coban",
+    links: [{ label: "paper", href: "" }],
+  },
+  {
     title: "Functional Representation Lemma and Its Applications",
     venue: "Semester project",
     authors: "Serhat Emre Coban",
