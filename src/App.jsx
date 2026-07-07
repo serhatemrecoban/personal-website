@@ -490,10 +490,9 @@ export default function App() {
           <h2>Miscellaneous</h2>
 
           <p>
-            Outside research, my main hobby is weighted calisthenics and being
-            a cheerful gym rat. On the side, I like playing chess, figure
-            skating, hiking, cooking, and trying to keep my plants alive through
-            sheer optimism.
+            Outside research, I spend a lot of time on weighted calisthenics
+            and enjoy being a gym rat. On the side, I like playing chess,
+            figure skating, cooking, hiking, and gardening.
           </p>
         </section>
 
