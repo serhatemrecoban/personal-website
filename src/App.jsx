@@ -89,6 +89,27 @@ const publications = [
 
 const projects = [
   {
+    title: "LeanInfoTheory",
+    venue: "Lean formalization project (ongoing)",
+    authors: "Serhat Emre Coban",
+    abstract:
+      "We present LeanInfoTheory, an early-stage Lean/mathlib project for finite information measures and a planned entropy-inequality certificate pipeline. " +
+      "The current development builds a mathlib-based finite-PMF Shannon foundation, including entropy, conditional entropy, mutual information, conditional mutual information, and named marginals. " +
+      "The library proves relabeling, coordinate-swap, product-reassociation, upper-bound, and uniform-law sanity theorems, and includes a semantic bridge identifying finite entropy with expected self-information over PMF.toMeasure. " +
+      "On the automation side, it develops formal entropy expressions, primitive Shannon inequality soundness theorems, and a proof-carrying checked-certificate layer with exact rational decomposition matching. " +
+      "As a first non-toy demo, the project derives entropy submodularity from a validated conditional-mutual-information certificate, with future work aimed at KL/conditional-law bridges, external certificate import, and network-information-theory converse examples.",
+    links: [
+      {
+        label: "Website",
+        href: "https://serhatemrecoban.github.io/LeanInfoTheory/",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/serhatemrecoban/LeanInfoTheory",
+      },
+    ],
+  },
+  {
     title: "Formally Verified PCP Constructions",
     venue: "Lean formalization project",
     authors:
@@ -107,27 +128,6 @@ const projects = [
       {
         label: "GitHub",
         href: "https://github.com/yuxi-zheng/blr-pcp-formal-verification",
-      },
-    ],
-  },
-  {
-    title: "LeanInfoTheory",
-    venue: "Lean formalization project (ongoing)",
-    authors: "Serhat Emre Coban",
-    abstract:
-      "We present LeanInfoTheory, an early-stage Lean/mathlib project for finite information measures and a planned entropy-inequality certificate pipeline. " +
-      "The current development builds a mathlib-based finite-PMF Shannon foundation, including entropy, conditional entropy, mutual information, conditional mutual information, and named marginals. " +
-      "The library proves relabeling, coordinate-swap, product-reassociation, upper-bound, and uniform-law sanity theorems, and includes a semantic bridge identifying finite entropy with expected self-information over PMF.toMeasure. " +
-      "On the automation side, it develops formal entropy expressions, primitive Shannon inequality soundness theorems, and a proof-carrying checked-certificate layer with exact rational decomposition matching. " +
-      "As a first non-toy demo, the project derives entropy submodularity from a validated conditional-mutual-information certificate, with future work aimed at KL/conditional-law bridges, external certificate import, and network-information-theory converse examples.",
-    links: [
-      {
-        label: "Website",
-        href: "https://serhatemrecoban.github.io/LeanInfoTheory/",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/serhatemrecoban/LeanInfoTheory",
       },
     ],
   },
