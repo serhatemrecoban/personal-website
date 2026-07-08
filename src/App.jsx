@@ -25,6 +25,9 @@ const externalLinkProps = {
 
 const opensInNewTab = (href) => Boolean(href) && !href.startsWith("#");
 
+const portraitPhotoMode = 1; // 1: fixed selected photo, 0: random from pool
+const selectedPortraitPhoto = "/photos/Emre-personal-website-photo-9.jpeg";
+
 const portraitPhotos = [
   "/photos/Emre-personal-website-photo-1.jpeg",
   "/photos/Emre-personal-website-photo-2.jpeg",
@@ -34,6 +37,7 @@ const portraitPhotos = [
   "/photos/Emre-personal-website-photo-6.jpeg",
   "/photos/Emre-personal-website-photo-7.jpeg",
   "/photos/Emre-personal-website-photo-8.jpeg",
+  selectedPortraitPhoto,
 ];
 
 const researchInterests = [
@@ -273,6 +277,10 @@ function Header() {
 
 function Portrait() {
   const [photoSrc, setPhotoSrc] = useState(() => {
+    if (portraitPhotoMode === 1) {
+      return selectedPortraitPhoto;
+    }
+
     const index = Math.floor(Math.random() * portraitPhotos.length);
     return portraitPhotos[index];
   });
@@ -284,7 +292,7 @@ function Portrait() {
           src={photoSrc}
           alt={profile.name}
           className="portrait-image"
-          onError={() => setPhotoSrc(portraitPhotos[0])}
+          onError={() => setPhotoSrc(selectedPortraitPhoto)}
         />
       </div>
     </div>
